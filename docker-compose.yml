@@ -1,0 +1,38 @@
+version: "2"
+
+services:
+  # データボリュームコンテナ
+  dbpg-container:
+    image: busybox
+    volumes:
+      - dbpg-volume:/var/lib/postgresql/data
+  # データベース
+  postgres-container:
+    container_name: postgres-container
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=0912
+    volumes_from:
+      - dbpg-container
+    depends_on:
+      - dbpg-container
+    # 自動的に表を作成するため
+    volumes:
+      - ./forDocker/db/initdb:/docker-entrypoint-initdb.d
+  # javaアプリ
+  javaapp-container:
+    build: ./javaApp
+    ports:
+      - 80:8080
+    depends_on:
+      - postgres-container
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-container:5432/0912
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+volumes:
+  dbpg-volume:
