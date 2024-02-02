@@ -11,6 +11,7 @@ services:
   postgres-container:
     container_name: postgres-container
     image: postgres
+      #ポートいらんかも
       #ports:
       #- 5432:5432
     environment:
