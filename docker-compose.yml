@@ -3,6 +3,7 @@ version: "2"
 services:
   # データボリュームコンテナ
   dbpg-container:
+    container_name: dbpg-container
     image: busybox
     volumes:
       - dbpg-volume:/var/lib/postgresql/data
@@ -10,8 +11,8 @@ services:
   postgres-container:
     container_name: postgres-container
     image: postgres
-    ports:
-      - 5432:5432
+      #ports:
+      #- 5432:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
@@ -25,6 +26,7 @@ services:
       - ./forDocker/db/initdb:/docker-entrypoint-initdb.d
   # javaアプリ
   javaapp-container:
+    container_name: javaapp-container
     build: ./javaApp
     ports:
       - 80:8080
