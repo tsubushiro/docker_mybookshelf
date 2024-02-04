@@ -134,3 +134,46 @@ Dockerファイル内のmybookshelf.war をビルドしたファイル名に差�
 [Gradleとは何者？インストール方法〜使い方までわかりやすく解説￼ | プログラミングを学ぶならトレノキャンプ（TRAINOCAMP）](https://camp.trainocate.co.jp/magazine/about-gradle/)    
 [Spring Boot + Gradleでwarファイルを作成する方法 | 株式会社CONFRAGE ITソリューション事業部](https://confrage.jp/spring-boot-gradle%e3%81%a7war%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95/)    
 [SpringBoot+gradleからwarファイルを作成して、Mac環境のTomcatにデプロイする #Java - Qiita](https://qiita.com/ShinPun/items/2e2e646e60f2dada9ede)  
+
+### メモ  
+**gradleについて**  
+私の環境だけかもしれませんが、pleiades環境で```gradle bootWar```を実行したときのビルドに失敗する時、
+gradle.buildで指定されているjavaのバージョンと、パスの通っているjava.exeのバージョンがずれていていることが原因かもしれません。  
+【エラー内容】  
+```
+D:\pleiades\2023-09\workspace\hellowork>gradle bootWar
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> エラー: 21は無効なソース・リリースです
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2s
+1 actionable task: 1 executed
+```
+【gradle.build】  
+gradle.buildには**21**と記載されている。
+```
+java {
+	sourceCompatibility = '21'
+}
+```
+【javaのバージョン確認】  
+java --versionの実行は**17**と印字されている。
+```
+>java --version
+openjdk 17.0.8.1 2023-08-24
+OpenJDK Runtime Environment Temurin-17.0.8.1+1 (build 17.0.8.1+1)
+OpenJDK 64-Bit Server VM Temurin-17.0.8.1+1 (build 17.0.8.1+1, mixed mode, sharing)
+```
+上記の場合、gradle.buildののjavaのsourceCompatibilityを'17'にするか、
+環境変数を変更するなどして、実行するjavaを21のバージョンの実行ファイルにするかしてください。
+
