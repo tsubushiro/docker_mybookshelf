@@ -139,7 +139,7 @@ Dockerファイル内のmybookshelf.war をビルドしたファイル名に差�
 **gradleについて**  
 私の環境だけかもしれませんが、pleiades環境で```gradle bootWar```を実行したときのビルドに失敗する時、
 gradle.buildで指定されているjavaのバージョンと、パスの通っているjava.exeのバージョンがずれていていることが原因かもしれません。  
-[エラー内容]  
+【エラー内容】  
 ```
 D:\pleiades\2023-09\workspace\hellowork>gradle bootWar
 > Task :compileJava FAILED
@@ -159,13 +159,15 @@ Execution failed for task ':compileJava'.
 BUILD FAILED in 2s
 1 actionable task: 1 executed
 ```
-[gradle.build] gradle.buildには**17**と記載されている。
+【gradle.build】  
+gradle.buildには**21**と記載されている。
 ```
 java {
 	sourceCompatibility = '21'
 }
 ```
-[javaのバージョン確認] java --versionの実行結果は**17**と印字されている。
+【javaのバージョン確認】  
+java --versionの実行は**17**と印字されている。
 ```
 >java --version
 openjdk 17.0.8.1 2023-08-24
