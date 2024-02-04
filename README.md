@@ -135,8 +135,8 @@ Dockerファイル内のmybookshelf.war をビルドしたファイル名に差�
 [Spring Boot + Gradleでwarファイルを作成する方法 | 株式会社CONFRAGE ITソリューション事業部](https://confrage.jp/spring-boot-gradle%e3%81%a7war%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95/)    
 [SpringBoot+gradleからwarファイルを作成して、Mac環境のTomcatにデプロイする #Java - Qiita](https://qiita.com/ShinPun/items/2e2e646e60f2dada9ede)  
 
-### メモ  
-**gradleについて**  
+## メモ  
+### **gradleについて**  
 私の環境だけかもしれませんが、pleiades環境で```gradle bootWar```を実行したときのビルドに失敗する時、
 gradle.buildで指定されているjavaのバージョンと、パスの通っているjava.exeのバージョンがずれていていることが原因かもしれません。  
 【エラー内容】  
@@ -176,4 +176,12 @@ OpenJDK 64-Bit Server VM Temurin-17.0.8.1+1 (build 17.0.8.1+1, mixed mode, shari
 ```
 上記の場合、gradle.buildののjavaのsourceCompatibilityを'17'にするか、
 環境変数を変更するなどして、実行するjavaを21のバージョンの実行ファイルにするかしてください。
+  
+### **DBのアクセスについて**  
+コンテナ起動中のDBサーバにアクセスし、SQLを実行するには下記コマンドを入力してください。   
+  
+```docker container exec -it postgres-container psql -Uユーザ名 -dデータベース名```  
+  
+例: 
+docker container exec -it postgres-container psql -Upostgres -d0912
 
