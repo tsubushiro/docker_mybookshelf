@@ -159,13 +159,13 @@ Execution failed for task ':compileJava'.
 BUILD FAILED in 2s
 1 actionable task: 1 executed
 ```
-[gradle.build]
+[gradle.build] gradle.buildには**17**と記載されている。
 ```
 java {
 	sourceCompatibility = '21'
 }
 ```
-[javaのバージョン確認]
+[javaのバージョン確認] java --versionの実行結果は**17**と印字されている。
 ```
 >java --version
 openjdk 17.0.8.1 2023-08-24
