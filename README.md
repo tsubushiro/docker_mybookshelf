@@ -136,7 +136,7 @@ Dockerファイル内のmybookshelf.war をビルドしたファイル名に差�
 [SpringBoot+gradleからwarファイルを作成して、Mac環境のTomcatにデプロイする #Java - Qiita](https://qiita.com/ShinPun/items/2e2e646e60f2dada9ede)  
 
 ### メモ  
-**gradleについて**
+**gradleについて**  
 私の環境だけかもしれませんが、pleiades環境で```gradle bootWar```を実行したときのビルドに失敗する時、
 gradle.buildで指定されているjavaのバージョンと、パスの通っているjava.exeのバージョンがずれていていることが原因かもしれません。  
 [エラー内容]  
