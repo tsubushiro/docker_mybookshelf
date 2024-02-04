@@ -175,5 +175,5 @@ OpenJDK Runtime Environment Temurin-17.0.8.1+1 (build 17.0.8.1+1)
 OpenJDK 64-Bit Server VM Temurin-17.0.8.1+1 (build 17.0.8.1+1, mixed mode, sharing)
 ```
 上記の場合、gradle.buildののjavaのsourceCompatibilityを'17'にするか、
-環境変数のパスをいじってバージョン21の実行ファイルにするかしてください。
+環境変数を変更するなどして、実行するjavaを21のバージョンの実行ファイルにするかしてください。
 
