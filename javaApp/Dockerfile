@@ -5,7 +5,7 @@ FROM openjdk:17
 WORKDIR /app
 
 # アプリケーションのJARファイルをコンテナにコピー
-COPY mybookshelf.war app.jar
+COPY mybookshelf.jar app.jar
 
 # ポートの公開
 EXPOSE 8080
