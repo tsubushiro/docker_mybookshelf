@@ -13,6 +13,7 @@ JavaフレームワークSpringBoot(gradle)とデータベースを使ったシ�
 
 ### 注意
 今回ビルドしたファイルは`mybookshelf.jar`というファイルになっていますが、各自ビルドしたファイルに読み替えてください。
+ビルドしたファイルはtomcatが同梱されているjarファイルです(```java -jar ビルドファイル```を実行したらWEBアプリが動く状態)。
 
 ## 1.ファイルの配置  
 ```
@@ -99,6 +100,7 @@ spring.datasource.password=password
 
 但し、　
 `jdbc:postgresql://`の次が`localhost`ではなく`postgres-container`になる事を注意してください。  
+  
 前：jdbc:postgresql://**localhost**:5432/0912  
 ↓  
 後：jdbc:postgresql://**postgres-container**:5432/0912
