@@ -133,7 +133,7 @@ Dockerファイル内のmybookshelf.war をビルドしたファイル名に差�
 [Running Spring Boot with PostgreSQL in Docker Compose | Baeldung](https://www.baeldung.com/spring-boot-postgresql-docker)  
 [docker-compose 下で Java + Spring Boot + PostgreSQL (Spring Data JPA編)](https://zenn.dev/junki555/articles/de2c9844a1d101)  
 [SpringBoot + Postgresqlでアプリを作成してみた【CRUD API】 #Docker - Qiita](https://qiita.com/kanfutrooper/items/d5b4ff8cf52d1a29102f)  
-[Docker で PostgreSQL 上にデータベースを作成しよう]　(https://zenn.dev/farstep/books/7acd1a7fee7e18/viewer/43e8ed)  
+[Docker で PostgreSQL 上にデータベースを作成しよう](https://zenn.dev/farstep/books/7acd1a7fee7e18/viewer/43e8ed)  
  
 ### メモ  
 **gradleについて**  
