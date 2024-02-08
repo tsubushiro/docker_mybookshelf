@@ -12,7 +12,7 @@ JavaフレームワークSpringBoot(gradle)とデータベースを使ったシ�
 - ビルドツール：gradle
 
 ### 注意
-今回ビルドしたファイルは`mybookshelf.jar`というファイルになっていますが、各自ビルドしたファイルに読み替えてください。
+今回ビルドしたファイルは`mybookshelf.jar`というファイルになっていますが、各自ビルドしたファイルに読み替えてください。  
 ビルドしたファイルはtomcatが同梱されているjarファイルです(```java -jar ビルドファイル```を実行したらWEBアプリが動く状態)。
 
 ## 1.ファイルの配置  
@@ -125,14 +125,29 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 ### E. ビルドファイルの設定
 Dockerファイル内のmybookshelf.jar をビルドしたファイル名に差し替えます。
+  
+## 4. 起動方法/停止方法  
+docker-compose.ymlのあるフォルダにcdして
+
+  
+【起動方法】  
+```docker-compose up -d```  
+  
+【停止方法】  
+```docker-compose down```  
+
+   
 
 以上です。  
+
   
-参考：こっちみたほうがはやいかも…  
+参考：こっちみたほうがはやいかも…   
 [Running Spring Boot with PostgreSQL in Docker Compose | Baeldung](https://www.baeldung.com/spring-boot-postgresql-docker)  
 [docker-compose 下で Java + Spring Boot + PostgreSQL (Spring Data JPA編)](https://zenn.dev/junki555/articles/de2c9844a1d101)  
 [SpringBoot + Postgresqlでアプリを作成してみた【CRUD API】 #Docker - Qiita](https://qiita.com/kanfutrooper/items/d5b4ff8cf52d1a29102f)  
 [Docker で PostgreSQL 上にデータベースを作成しよう](https://zenn.dev/farstep/books/7acd1a7fee7e18/viewer/43e8ed)  
+[SpringBootのアプリケーションをDockerコンテナで動かす #Docker - Qiita](https://qiita.com/ke_suke0215/items/1b0128c140dd051b5993)  
+[Spring Bootアプリケーションのコンテナ化を試してみた #Docker - Qiita](https://qiita.com/saitoshi/items/a931399e81e63e8e4f1e)  
  
 ### メモ  
 **gradleについて**  
