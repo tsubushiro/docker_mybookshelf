@@ -1,6 +1,6 @@
 # 自分用メモ
 すみません、意味を取り違えてました。  
-ビルドファイルは**warじゃなくてjar**です。  
+ビルドファイルの形式は**warじゃなくてjar**です。  
 読み替えてください。  
 
 ## 概要  
@@ -134,12 +134,7 @@ Dockerファイル内のmybookshelf.war をビルドしたファイル名に差�
 [docker-compose 下で Java + Spring Boot + PostgreSQL (Spring Data JPA編)](https://zenn.dev/junki555/articles/de2c9844a1d101)  
 [SpringBoot + Postgresqlでアプリを作成してみた【CRUD API】 #Docker - Qiita](https://qiita.com/kanfutrooper/items/d5b4ff8cf52d1a29102f)  
 [Docker で PostgreSQL 上にデータベースを作成しよう]　(https://zenn.dev/farstep/books/7acd1a7fee7e18/viewer/43e8ed)  
-**※下記warの場合です**。今回はjarなので関係無し。  
-~~[SpringBootことはじめ　2.gradleで実行可能なwarファイルを作る #Java - Qiita](https://qiita.com/suganury/items/6e4f1a7fd4e37608a5cc) ~~ 
-[Gradleとは何者？インストール方法〜使い方までわかりやすく解説￼ | プログラミングを学ぶならトレノキャンプ（TRAINOCAMP）](https://camp.trainocate.co.jp/magazine/about-gradle/)    
-[Spring Boot + Gradleでwarファイルを作成する方法 | 株式会社CONFRAGE ITソリューション事業部](https://confrage.jp/spring-boot-gradle%e3%81%a7war%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95/)    
-[SpringBoot+gradleからwarファイルを作成して、Mac環境のTomcatにデプロイする #Java - Qiita](https://qiita.com/ShinPun/items/2e2e646e60f2dada9ede)  
-~~
+ 
 ### メモ  
 **gradleについて**  
 私の環境だけかもしれませんが、pleiades環境で```gradle bootWar```を実行したときのビルドに失敗する時、
