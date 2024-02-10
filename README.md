@@ -101,9 +101,9 @@ spring.datasource.password=password
 但し、　
 `jdbc:postgresql://`の次が`localhost`ではなく`postgres-container`になる事を注意してください。  
   
-前：jdbc:postgresql://**localhost**:5432/0912  
+application.properties(プロジェクト内のファイル) の記述：jdbc:postgresql://**localhost**:5432/0912  
 ↓  
-後：jdbc:postgresql://**postgres-container**:5432/0912
+docker-compose.yml の記述：jdbc:postgresql://**postgres-container**:5432/0912
 
 ## 3. ./javaApp/Dockerfileの編集
 ```
